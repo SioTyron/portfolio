@@ -23,6 +23,20 @@ lottie_dev = load_lottieUrl("https://lottie.host/82cffce2-eb7d-4550-91e7-2cae52c
 lottie_contact = load_lottieUrl("https://lottie.host/dbdaa6ee-87f1-4c6d-9178-55ea8ec09606/oqN1CqB2GH.json")
 cv_url = "https://drive.google.com/file/d/1wcmgXkOo-Ssfe3CZUzSaGbMwV3-obdPL/view?usp=sharing"
 
+
+st.markdown(
+    """
+    <style>
+    @media (max-width: 600px) {
+        .reportview-container {
+            flex-direction: column;
+        }
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # --------------------------------
 #           CSS 
 # --------------------------------
@@ -91,7 +105,7 @@ st.markdown( """ <style>
 #           Header Accueil 
 # --------------------------------
 st.write("##")
-st.subheader("Bonjour :wave:")
+st.subheader("Bonjour, je suis Tyron :wave:")
 
 col1, col2 = st.columns([1, 1])
 with col1:
@@ -99,9 +113,9 @@ with col1:
     st.write("##")
     st.write("""
          Je m'appelle <name>de CHADIRAC-LARA Tyron</name>, 
-         je suis <bleu>développeur web full stack</bleu> et un passionné d'informatique !""", unsafe_allow_html=True)
+         je suis <bleu>développeur web full stack</bleu> originaire de la <bleu>Guadeloupe :flag-gp:</bleu> et un <bleu>passionné d'informatique</bleu> !""", unsafe_allow_html=True)
     # -- Lien Réseaux Sociaux -- 
-    st.write("[LinkedIn](https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/)")
+    st.write("[LinkedIn](https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/) <br>[GitHub](https://github.com/SioTyron)",unsafe_allow_html=True)
     st.link_button("📑 Télécharger mon CV", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
 
 with col2:
@@ -233,7 +247,7 @@ if selected =="Veille technologique":
             #--------------------------------
             st.header("Certifications")
             st.write("##")
-            st.write("""Vous trouverez ici les certifications que j'ai <bleu>ascuqises</bleu>, celles qui sont en <bleu>cours d'ascquisition</bleu>,
+            st.write("""Vous trouverez ici les certifications que j'ai <bleu>acquises</bleu>, celles qui sont en <bleu>cours d'ascquisition</bleu>,
                      ainsi que les certifications que <bleu>j'envisage de réaliser</bleu>.
                      
                      """,unsafe_allow_html=True)
@@ -351,6 +365,49 @@ if selected =="Veille technologique":
 
                         """,unsafe_allow_html=True)
                         st.write("##")
+            #--------------------------------
+            # -- Outils Veille Techno --
+            #--------------------------------
+
+            st.header("Mes sources de Veille Technologique")
+            st.write("##")
+            col1, col2 = st.columns([1,2])
+            with col1 :
+                 st.image("Images/underscore.png", caption="Underscore_", width=200)
+            with col2:
+                 st.write("""<bold>Underscore_</bold> est une émission hedomadaire sur des sujets variés.<br>
+                          Ils ont comme thème principal la technologie et traitent chaque mercredi de sujets tel que : 
+                          <li>:robot_face: L'intelligence articielle</li>
+                          <li>:newspaper: Les dernières innovations</li>
+                          <li>:lock: La Cybersécurité</li>
+                    """,unsafe_allow_html=True)
+                 st.write(":globe_with_meridians:[YouTube](https://www.youtube.com/@Underscore_)")
+            st.write("---")
+
+            col1, col2 = st.columns([1,2])
+            with col1 :
+                 st.image("Images/ddev.jpeg", caption="Daily Dev", width=200)
+            with col2:
+                 st.write("""<bold>DailyDev</bold> est une extension qui permet de centraliser des flux RSS.<br>
+                          Cet outil est spécialisé pour les nouvelles dans le domaine de l'informatique.<br>
+                          Ainsi, il est possible de sélectionner nos sujets d'intérêts et de recevoir dans son "feed" des articles qui y sont liés.<br>
+                          Cette plateforme professionnelle open-source est dédiée aux développeurs. <br>
+                          Elle permet aux développeurs de se réunir pour apprendre et collaborer.
+                    """,unsafe_allow_html=True)
+                 st.write(":globe_with_meridians:[Daily Dev](https://daily.dev/fr-fr)")
+            st.write("---")
+
+            col1, col2 = st.columns([1,2])
+            with col1 :
+                 st.image("Images/feedly.png", caption="Feedly", width=200)
+            with col2:
+                 st.write("""<bold>Feedly</bold>Feedly est un agrégateur de flux RSS qui permet 
+                          aux utilisateurs de centraliser et de suivre les actualités de leurs sites préférés en un seul endroit.<br>
+                          En plus de faciliter la veille informationnelle, Feedly permet de partager les sources d'information sur les réseaux sociaux.<br>
+                          Grâce à Feedly, il est possible de recevoir automatiquement des contenus provenant de divers sites web, qu'il s'agisse de journaux, de blogs ou d'autres sources d'information
+                    """,unsafe_allow_html=True)
+                 st.write(":globe_with_meridians:[Feedly](https://feedly.com/)")
+            st.write("---")
                 
 
 # --------------------------------
@@ -361,6 +418,22 @@ if selected =="Projets":
     st.header("Mes Projets")
     st.write("##")
      #-------------------------------------------------------
+    col16,col17 = st.columns([1,2])
+    with col16:
+        st.image("Images/logo6.png",caption="Web Scraping", width=200)
+    with col17:
+        st.subheader("Web Scraping")
+        st.write(""" <bleu>Description du projet : </bleu><br>
+                    J'ai utiliser Python pour réaliser un programme de web scraping. <br> 
+                    L'objectif de ce programme est d'aller sur une section contenant un formulaire de contact, le remplir et le soummettre.<br>
+                    Ce programme existe pour répondre à un besoin d'activation de formulaire. C'est-à-dire que le formulaire de contact nécessite une activation journalière.
+                    """,unsafe_allow_html=True)
+        st.write("Type de Projet : <bold>Projet Automatisation avec Python</bold>", unsafe_allow_html=True)
+        st.write("Date de réalisation : <bold>Janvier 2025</bold>",unsafe_allow_html=True)
+        st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/TBot/tree/main)")
+        #st.write(":camera: [Voir une démonstration]()")
+    st.write("---")
+    #-------------------------------------------------------
     col16,col17 = st.columns([1,2])
     with col16:
         st.image("Images/logo4.jpg",caption="Logo Excel", width=200)
@@ -417,11 +490,33 @@ if selected =="Projets":
                     Il faut également afficher des prestations et des services depuis une base de données MySQL.<br>
                     J'ai implémenter une gestion d'un panier utilisateur pour ajouter des produits et des services, ainsi qu'une interface de paiement.
                     """,unsafe_allow_html=True)
-        st.write("Type de Projet : <bold>Projet Web Dynamique</bold>", unsafe_allow_html=True)
+        st.write("Type de Projet : <bold>Projet Web Dynamique MVC</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Octobre 2024</bold>",unsafe_allow_html=True)
         st.write(":camera: [Plus d'images](https://drive.google.com/drive/folders/1lDgOvAXOME41kVx0s-GfyIXS2Fn4Tv1h?usp=drive_link)")
     st.write("---")
      #-------------------------------------------------------
+    col16,col17 = st.columns([1,2])
+    with col16:
+        st.image("Images/logo7.png",caption="Logo HT Auto", width=200)
+    with col17:
+        st.subheader("HtAuto")
+        st.write(""" <bleu>Description du projet :</bleu> <br>
+                   Il s'agit d'un projet Web en PHP en utilisant l'architecture <bold>MVC (Modèle Vue Controller)</bold><br>""",unsafe_allow_html=True)
+        with st.expander("En voir plus"):
+                 st.write("""
+                 <li>Connexion à une base de données pour l'affichage des données <br>(les images sont également dans la base de données)</li>
+                 <li>Option permettant de rechercher une voiture par rapport à son type</li>
+                 <li>Option permettant de rechercher une voiture par rapport à sa marque</li>
+                 <li>Une page de connexion pour les utilisateurs et pour les administrateurs</li><br>
+                 Utilisation d'une varaible de session en php pour :<br>
+                 <li>Ajouter une voiture dans la base de données via un formulaire</li>
+                 <li>La Suppression d'une voiture dans le catalogue avec l'ajout d'un bouton supprimer</li>
+                    """,unsafe_allow_html=True)
+        st.write("Type de Projet : <bold>Projet Site Web Dynamique MVC</bold>", unsafe_allow_html=True)
+        st.write("Date de réalisation : <bold>Mai 2024</bold>",unsafe_allow_html=True)
+        #st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/Aichi_Box)")
+        st.write(":camera: [Voir le projet en image](https://drive.google.com/drive/folders/1W5ze1GB7Oadeq6xDvYr9xApr86kKV4R6?usp=drive_link)")
+    st.write("---")
     col18, col19 = st.columns([1,2])
     with col18:
             st.image("Images/logo2.png", caption="Logo Jardin Saint-Eloi", width=200)
@@ -476,3 +571,4 @@ if selected =="Contact":
         st.markdown(contact_form, unsafe_allow_html=True)
     with right_col:
         st_lottie(lottie_contact,width=400, height=300,speed=0.1 , loop=True)
+
