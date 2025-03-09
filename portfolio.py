@@ -21,7 +21,7 @@ def load_lottieUrl(url):
 # --------------------------------
 lottie_dev = load_lottieUrl("https://lottie.host/82cffce2-eb7d-4550-91e7-2cae52c439cc/x6jPAZP0XR.json")
 lottie_contact = load_lottieUrl("https://lottie.host/dbdaa6ee-87f1-4c6d-9178-55ea8ec09606/oqN1CqB2GH.json")
-cv_url = "https://drive.google.com/file/d/1wcmgXkOo-Ssfe3CZUzSaGbMwV3-obdPL/view?usp=sharing"
+cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=sharing"
 
 
 st.markdown(
