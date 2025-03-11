@@ -147,7 +147,7 @@ if selected == "Accueil":
         # -- Section qui suis-je --
         #--------------------------------
         st.subheader("Qui suis-je ?")
-        st.write(""" Je  suis un jeune <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abbord intéressé par le développement web, j'ai commencé à me former
+        st.write(""" Je  suis un <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abbord intéressé par le développement web, j'ai commencé à me former
                      sur <bleu>OpenClassroom dès la 3ème</bleu>. <br>Par la suite, j'ai choisi un cursus qui m'a permis d'appronfondir mes connaissances à ce sujet, faisant de moi <bleu>un développeur web full stack.</bleu>
                      <br>Mais au cours de ma formation, j'ai découvert l'univers fascinant de la <bleu>Cybersécurité</bleu> ! 
                      C'est ce qui m'a pousé à poursuivre mes études pour devenir un spécialiste de la cybersécurité !
@@ -180,7 +180,7 @@ if selected == "Accueil":
         #--------------------------------
         # -- Section Expérience Pro --
         #--------------------------------
-        st.subheader("Expérience professionnelle")
+        st.subheader("Expériences professionnelles")
         st.write("")
         col5, col6 = st.columns([3, 2])
         # -- Intitulé des Postes -- 
