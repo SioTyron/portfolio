@@ -21,7 +21,8 @@ def load_lottieUrl(url):
 # --------------------------------
 lottie_dev = load_lottieUrl("https://lottie.host/82cffce2-eb7d-4550-91e7-2cae52c439cc/x6jPAZP0XR.json")
 lottie_contact = load_lottieUrl("https://lottie.host/dbdaa6ee-87f1-4c6d-9178-55ea8ec09606/oqN1CqB2GH.json")
-cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=sharing"
+cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=drive_link"
+tableau_synthese_url = "https://drive.google.com/file/d/1XSHV-_v6ysNqvPnyLCqZZkCKxznLpP_N/view?usp=drive_link"
 
 
 st.markdown(
@@ -110,13 +111,21 @@ st.subheader("Bonjour, je suis Tyron :wave:")
 col1, col2 = st.columns([1, 1])
 with col1:
     st.title("Bienvenue sur mon Portfolio")
-    st.write("##")
+    #st.write("##")
     st.write("""
          Je m'appelle <name>de CHADIRAC-LARA Tyron</name>, 
          je suis <bleu>développeur web full stack</bleu> originaire de la <bleu>Guadeloupe :flag-gp:</bleu> et un <bleu>passionné d'informatique</bleu> !""", unsafe_allow_html=True)
+    st.write("")
     # -- Lien Réseaux Sociaux -- 
-    st.write("[LinkedIn](https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/) <br>[GitHub](https://github.com/SioTyron)",unsafe_allow_html=True)
-    st.link_button("📑 Télécharger mon CV", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+    col99, col100 = st.columns(2)
+    with col99:
+        st.write("[LinkedIn](https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/)",unsafe_allow_html=True)
+        st.write("---")
+        st.link_button("📑 Télécharger mon CV", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+    with col100:
+        st.write("[GitHub](https://github.com/SioTyron)",unsafe_allow_html=True)
+        st.write("---")
+        st.link_button("↓ Télécharger mon tableau de synthèse", tableau_synthese_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
 
 with col2:
     st_lottie(lottie_dev,width=400, height=300, loop=True, quality='high')
@@ -147,7 +156,7 @@ if selected == "Accueil":
         # -- Section qui suis-je --
         #--------------------------------
         st.subheader("Qui suis-je ?")
-        st.write(""" Je  suis un <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abbord intéressé par le développement web, j'ai commencé à me former
+        st.write(""" Je  suis un jeune <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abbord intéressé par le développement web, j'ai commencé à me former
                      sur <bleu>OpenClassroom dès la 3ème</bleu>. <br>Par la suite, j'ai choisi un cursus qui m'a permis d'appronfondir mes connaissances à ce sujet, faisant de moi <bleu>un développeur web full stack.</bleu>
                      <br>Mais au cours de ma formation, j'ai découvert l'univers fascinant de la <bleu>Cybersécurité</bleu> ! 
                      C'est ce qui m'a pousé à poursuivre mes études pour devenir un spécialiste de la cybersécurité !
