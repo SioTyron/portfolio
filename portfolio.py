@@ -567,12 +567,14 @@ if selected =="Contact":
     st.write("##")
     st.header("Me Contacter")
     contact_form = """
-            <form action="https://formsubmit.co/certificat.tyron@gmail.com" method="POST">
-                <input type="text" name="name" placeholder="Votre Nom"required>
-                <input type="email" name="email" placeholder="Votre email" required>
-                <textarea name="message" placeholder="Votre message" required></textarea>
+                <form
+                action="https://formspree.io/f/xrbpqqvl"
+                method="POST">
+                <input type="text" name="name" placeholder="Votre Nom" required>
+                <input type="email" name="email" placeholder="Votre Email" required>
+                <textarea name="message"placeholder="Votre Message" required></textarea>
                 <button type="submit">Envoyer</button>
-            </form>
+                </form>
 
              """
     left_col, right_col = st.columns([2,1])
