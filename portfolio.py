@@ -572,10 +572,9 @@ if selected =="Contact":
                 method="POST">
                 <input type="text" name="name" placeholder="Votre Nom" required>
                 <input type="email" name="email" placeholder="Votre Email" required>
-                <textarea name="message"placeholder="Votre Message" required></textarea>
+                <textarea name="message" placeholder="Votre Message" required></textarea>
                 <button type="submit">Envoyer</button>
                 </form>
-
              """
     left_col, right_col = st.columns([2,1])
     with left_col:
