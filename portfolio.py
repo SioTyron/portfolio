@@ -22,7 +22,7 @@ def load_lottieUrl(url):
 lottie_dev = load_lottieUrl("https://lottie.host/82cffce2-eb7d-4550-91e7-2cae52c439cc/x6jPAZP0XR.json")
 lottie_contact = load_lottieUrl("https://lottie.host/dbdaa6ee-87f1-4c6d-9178-55ea8ec09606/oqN1CqB2GH.json")
 cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=drive_link"
-tableau_synthese_url = "https://drive.google.com/file/d/1XSHV-_v6ysNqvPnyLCqZZkCKxznLpP_N/view?usp=drive_link"
+tableau_synthese_url = "https://drive.google.com/file/d/1HgeU3vJEH4VP4mF2RtfHHRWPa1_hkw9_/view?usp=sharing"
 
 
 st.markdown(
@@ -138,7 +138,7 @@ st.write("---")
 with st.container():
     selected = option_menu(
         menu_title=None,
-        options=["Accueil","Veille technologique", "Projets", "Contact"],
+        options=["Accueil","Veille", "Projets", "Contact"],
         icons=["house","bell-fill", "briefcase", "phone"],
         orientation="horizontal",
         )
@@ -228,7 +228,7 @@ if selected == "Accueil":
                 st.write("<competences>Anglais</competences> - ⭐️⭐️⭐️⭐️☆",unsafe_allow_html=True)
                 st.write("---")
 
-                st.write("<competences>HTML/CSS</competences> - ⭐️⭐️⭐️☆☆",unsafe_allow_html=True)
+                st.write("<competences>HTML/CSS</competences> - ⭐️⭐️⭐️⭐️☆",unsafe_allow_html=True)
                 st.write("---")
 
                 st.write("<competences>C++</competences> - ⭐️⭐️☆☆☆",unsafe_allow_html=True)
@@ -249,7 +249,7 @@ if selected == "Accueil":
 #   Section Veille Technologique 
 #   NavBar == Veille Technologique
 # --------------------------------
-if selected =="Veille technologique":
+if selected =="Veille":
     with st.container():
             #--------------------------------
             # -- Certifications --
@@ -287,17 +287,30 @@ if selected =="Veille technologique":
                         st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
                         #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
                     st.write("##")
+                    with st.expander("Certification HTML/CSS"):
+                        st.write("""Détails de la certification :<br>
+                                    Certification de niveau de langue en anglais, délivrée par le centre de Cambridge. <br>
+                                    L'épreuve se compose d'une épreuve Orale d'interraction en binôme face à un jurry.<br>
+                                    Puis une épreuve écrite de compréhension Orale et Écrite.
+                                    """,unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
+                        #st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
                 with col11:
                     with st.expander("Pix"):
                         st.write(""" Détails de la certification :<br>
-                                 Certification de connaissance des outils informatiques. <br>
-                                 L'épreuve se compose d'une série de questions adaptées au niveau des différentes compétences
-                                 qui ont été étudiées durant la campagne de certification.
+                                 Cette certification couvre les bases du HTML5 pour structurer le contenu (titres, paragraphes, liens, images) et du CSS3 pour la mise en forme et le style visuel.
                                  """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Avril 2023</bleu>",unsafe_allow_html=True)
-                        st.write("<bleu>Session de renouvellement prévue en 2025</bleu>",unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Février 2025</bleu>",unsafe_allow_html=True)
+                        #st.write("<bleu>Session de renouvellement prévue en 202</bleu>",unsafe_allow_html=True)
                         #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
                     st.write("##")
+                    with st.expander("Certification PHP/MySQL"):
+                        st.write("""Détails de la certification :<br>
+                                    Cette certification couvre les bases du langage PHP pour développer des fonctionnalités interactives et utilise MySQL pour gérer les bases de données.
+                                    """,unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
+                        #st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
+                        st.write("##")
                 with col12:
                     with st.expander("Utilisez ChatGPT pour améliorer votre Productivité"):
                         st.write("""Détails de la certification :<br>
@@ -307,6 +320,14 @@ if selected =="Veille technologique":
                                  """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Janvier 2024</bleu>",unsafe_allow_html=True)
                         #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+                    st.write("##")
+                    with st.expander("Augmentez votre trafic grâce au référencement naturel (SEO)"):
+                        st.write("""Détails de la certification :<br>
+                                 Cette certification couvre les bases du SEO, les bonnes pratiques pour optimiser le référencement naturel de son site web. Ainsi que les mauvaises pratiques qui peuvent pénaliser un site internet dans les classements.
+                                 Nous y apprenons aussi à mettre en place une stratégie de référencement pour augmenter le trafic sur un site web (analyse de mots-clés, analyse des balises de la page...).
+                                 """,unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Juin 2024</bleu>",unsafe_allow_html=True)
+                        #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
             #--------------------------------
             # -- Certifications En Cours --
             #--------------------------------
@@ -315,8 +336,8 @@ if selected =="Veille technologique":
                 st.header("Certifications")
                 col13, col14, col15 = st.columns([2,1,2])  
                 with col13:
-                    st.write("HTML/CSS")
-                    html_progress = 75
+                    st.write("Swift")
+                    html_progress = 30
                     st.progress(html_progress)
                     st.write(f"Avancement : {html_progress}%")
                         
@@ -329,10 +350,18 @@ if selected =="Veille technologique":
 
                     st.write("---")
 
-                    st.write("PHP/SQL")
-                    php_sql_progress = 37
+                    st.write("C++")
+                    php_sql_progress = 75
                     st.progress(php_sql_progress)
                     st.write(f"Avancement : {php_sql_progress}%")
+
+                    st.write("---")
+
+                    st.write("TOEIC")
+                    csharp_progress = 50
+                    st.progress(csharp_progress)
+                    st.write(f"Avancement : {csharp_progress}%")
+
                 with col15:
                     st.write("Python")
                     python_progress = 80
@@ -342,6 +371,13 @@ if selected =="Veille technologique":
                     st.write("---")
 
                     st.write("C#")
+                    csharp_progress = 75
+                    st.progress(csharp_progress)
+                    st.write(f"Avancement : {csharp_progress}%")
+
+                    st.write("---")
+
+                    st.write("UI/UX Design")
                     csharp_progress = 75
                     st.progress(csharp_progress)
                     st.write(f"Avancement : {csharp_progress}%")
@@ -357,15 +393,12 @@ if selected =="Veille technologique":
                         st.write(""" J'envisage cette formation par curiosité pour l'exploitation de data avec python.<br>
 
                         """,unsafe_allow_html=True)
-                        st.write("##")
+                        #st.write("##")
                 with col2:
-                    with st.expander("TOEIC"):
-                        st.write(""" Le TOEIC est une certification en anglais.<br>
-                                 Elle apporterait une plus value à mon expérience en langue étrangères.<br> 
-                                 De plus, ayant déjà le Cambridge, passer le TOEIC est un bon challenge.
-
+                    with st.expander("Sécurisez vos applications web avec l'OWASP"):
+                        st.write(""" Cette certifitcaiton couvre les bases de la sécurité des applications web. <br> Elle est donc intéressante pour améliorer la sécurité des applications que je développe.
                         """,unsafe_allow_html=True)
-                        st.write("##")
+                        #st.write("##")
                 with col3:
                     with st.expander("C"):
                         st.write(""" Je souhaite m'orienter en licence après mon BTS.<br>
@@ -373,7 +406,7 @@ if selected =="Veille technologique":
                                  Licence.
 
                         """,unsafe_allow_html=True)
-                        st.write("##")
+                        #st.write("##")
             #--------------------------------
             # -- Outils Veille Techno --
             #--------------------------------
@@ -426,6 +459,43 @@ if selected =="Veille technologique":
 if selected =="Projets":
     st.header("Mes Projets")
     st.write("##")
+         #-------------------------------------------------------
+    col16,col17 = st.columns([1,2])
+    with col16:
+        st.image("Images/PriceScope.png",caption="Price Scope", width=200)
+    with col17:
+        st.subheader("Price Scope")
+        st.write(""" <bleu>Description du projet : </bleu><br>
+                   Price Scope est un comparateur de prix collaboratif. <br>
+                    En effet, il se base sur les données saisies par les utilisateurs pour comparer les prix des produits. <br>
+                    Ce projet à pour vocation de permettre aux utilisateurs d'adapter leurs mode de consommation en fonction des prix pratiqués par les différents commerçants.
+                    """,unsafe_allow_html=True)
+        st.write("Technologie Utilisée : <bold>Streamlit</bold>", unsafe_allow_html=True)
+        st.write("Type de Projet : <bold>Comparateur de Prix</bold>", unsafe_allow_html=True)
+        st.write("Date de réalisation : <bold>Mars 2025</bold>",unsafe_allow_html=True)
+        st.write(":computer: [Voir le code du projet](lien)")
+        st.write(":globe_with_meridians: [Accéder au projet](lien)")
+        st.write("Le lien vers le projet sera accessible à partir du 28/03/2025")
+    st.write("---")
+          #-------------------------------------------------------
+    col16,col17 = st.columns([1,2])
+    with col16:
+        st.image("Images/logoPlayCache.png",caption="Play Cache logo", width=200)
+    with col17:
+        st.subheader("Bibliothèque de Jeux")
+        st.write(""" <bleu>Description du projet : </bleu><br>
+                   Play Cache est une application codée en Swift pour permettre la gestion de jeux originaux. <br>
+                J'ai du utiliser des Api en PHP pour communiquer avec la base de données pour permettre les fonctionnalités suivantes :<br>
+                <li>Recherche de jeux</li>
+                <li>Ajout de jeux</li>
+                <li>Suppression de jeux</li>
+                <li>Modification de jeux</li>
+                    """,unsafe_allow_html=True)
+        st.write("Type de Projet : <bold>Application Responsive</bold>", unsafe_allow_html=True)
+        st.write("Date de réalisation : <bold>Janvier 2025</bold>",unsafe_allow_html=True)
+        st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/PlayCache)")
+        st.write(":camera: [Voir le projet en image](lien)")
+    st.write("---")
      #-------------------------------------------------------
     col16,col17 = st.columns([1,2])
     with col16:
@@ -572,7 +642,7 @@ if selected =="Contact":
                 method="POST">
                 <input type="text" name="name" placeholder="Votre Nom" required>
                 <input type="email" name="email" placeholder="Votre Email" required>
-                <textarea name="message" placeholder="Votre Message" required></textarea>
+                <textarea name="message"placeholder="Votre Message" required></textarea>
                 <button type="submit">Envoyer</button>
                 </form>
              """
