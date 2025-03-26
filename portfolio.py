@@ -473,10 +473,9 @@ if selected =="Projets":
         st.write("Technologie Utilisée : <bold>Streamlit</bold>", unsafe_allow_html=True)
         st.write("Type de Projet : <bold>Comparateur de Prix</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Mars 2025</bold>",unsafe_allow_html=True)
-        st.write(":computer: [Voir le code du projet](lien)")
-        st.write(":globe_with_meridians: [Accéder au projet](lien)")
-        st.write("Le lien vers le projet sera accessible à partir du 28/03/2025")
-    st.write("---")
+        st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/PriceScope)")
+        st.write(":globe_with_meridians: [Voir le projet en ligne](https://pricescope.streamlit.app/)")
+    st.write("---") 
           #-------------------------------------------------------
     col16,col17 = st.columns([1,2])
     with col16:
@@ -494,7 +493,7 @@ if selected =="Projets":
         st.write("Type de Projet : <bold>Application Responsive</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Janvier 2025</bold>",unsafe_allow_html=True)
         st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/PlayCache)")
-        st.write(":camera: [Voir le projet en image](lien)")
+        st.write(":camera: [Voir le projet en image](https://drive.google.com/drive/folders/1EKR8oxnRQWCcK-Nlo4BnJqT8e-c5rtIg?usp=sharing)")
     st.write("---")
      #-------------------------------------------------------
     col16,col17 = st.columns([1,2])
