@@ -203,6 +203,7 @@ if selected == "Accueil":
                              -Informatique de proximité <br>
                              -Création d'un <bleu>thème enfant sur WordPress</bleu> (avec et sans plugin) 
                      """,unsafe_allow_html=True)
+                st.write("[Consulter l'attestation](https://drive.google.com/file/d/1XYu2Uwhie--SL_-qruLNmTpqDu9LVyhw/view?usp=drive_link)",unsafe_allow_html=True)
             st.write("##")
             st.write(" :office: La Créole Beach Hôtel & Spa - *stagiaire au service informatique*") 
             with st.expander("Activités Réalisées"):
@@ -213,6 +214,7 @@ if selected == "Accueil":
                              -<bleu>Exploitation de base de données avec python</bleu> pour créer une web app avec <bleu>streamlit</bleu> <br>
                              -<bleu>Maintenance d’équipement réseaux.</bleu>
                      """, unsafe_allow_html=True)
+                    st.write("[Consulter l'attestation](https://drive.google.com/file/d/1da-OtJCv2VQheu1HYb-xmNYWRewJddt3/view?usp=drive_link)",unsafe_allow_html=True)
         # -- Dates -- 
         with col6:
             st.write(" :calendar: 9 Décembre 2024 - 17 Janvier 2025")
