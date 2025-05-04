@@ -21,8 +21,8 @@ def load_lottieUrl(url):
 # --------------------------------
 lottie_dev = load_lottieUrl("https://lottie.host/82cffce2-eb7d-4550-91e7-2cae52c439cc/x6jPAZP0XR.json")
 lottie_contact = load_lottieUrl("https://lottie.host/dbdaa6ee-87f1-4c6d-9178-55ea8ec09606/oqN1CqB2GH.json")
-cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=drive_link"
-tableau_synthese_url = "https://drive.google.com/file/d/1HgeU3vJEH4VP4mF2RtfHHRWPa1_hkw9_/view?usp=sharing"
+cv_url = "https://drive.google.com/file/d/1dUqLuY6PvAiKaE3lMbxlnmk7DyGN5yvV/view?usp=sharing"
+tableau_synthese_url = "https://drive.google.com/file/d/1HgeU3vJEH4VP4mF2RtfHHRWPa1_hkw9_/view?usp=drive_link"
 
 
 st.markdown(
@@ -151,15 +151,12 @@ if selected == "Accueil":
     with st.container():
         st.write("##")
         st.title("À propos")
-        st.write("##")
         #--------------------------------
         # -- Section qui suis-je --
         #--------------------------------
         st.subheader("Qui suis-je ?")
-        st.write(""" Je  suis un jeune <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abbord intéressé par le développement web, j'ai commencé à me former
-                     sur <bleu>OpenClassroom dès la 3ème</bleu>. <br>Par la suite, j'ai choisi un cursus qui m'a permis d'appronfondir mes connaissances à ce sujet, faisant de moi <bleu>un développeur web full stack.</bleu>
-                     <br>Mais au cours de ma formation, j'ai découvert l'univers fascinant de la <bleu>Cybersécurité</bleu> ! 
-                     C'est ce qui m'a pousé à poursuivre mes études pour devenir un spécialiste de la cybersécurité !
+        st.write(""" Je  suis un jeune <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abord intéressé par le développement web, j'ai commencé à me former
+                     sur <bleu>OpenClassrooms dès la 3ème</bleu>. <br>Par la suite, j'ai choisi un cursus qui m'a permis d'approfondir mes connaissances à ce sujet, faisant de moi <bleu>un développeur web full stack.</bleu>
              """, unsafe_allow_html=True) 
         st.write("##")
         
@@ -189,6 +186,7 @@ if selected == "Accueil":
         #--------------------------------
         # -- Section Expérience Pro --
         #--------------------------------
+        st.write("##")
         st.subheader("Expériences professionnelles")
         st.write("")
         col5, col6 = st.columns([3, 2])
@@ -198,23 +196,23 @@ if selected == "Accueil":
             with st.expander("Activités Réalisées"):
                 st.write(""" -Création d'une solution <bleu>logicielle sur Excel en VBA</bleu> pour simplifier le travail d'une collègue du service de 
                              comptabilité. <br>
-                             -Création d'une <bleu>base de donnée</bleu> et un <bleu>serveur Syslog</bleu> pour récupérer les logs d'un PfSense <br>
-                             -Interface graphique pour interpréter les logs en utilisant le <bleu>framework python streamlit</bleu><br>
+                             -Création d'une <bleu>base de données</bleu> et un <bleu>serveur Syslog</bleu> pour récupérer les logs d'un PfSense <br>
+                             -Interface graphique pour interpréter les logs en utilisant le <bleu>framework python : streamlit</bleu><br>
                              -Informatique de proximité <br>
                              -Création d'un <bleu>thème enfant sur WordPress</bleu> (avec et sans plugin) 
                      """,unsafe_allow_html=True)
-                st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1XYu2Uwhie--SL_-qruLNmTpqDu9LVyhw/view?usp=drive_link)",unsafe_allow_html=True)
+                st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1XYu2Uwhie--SL_-qruLNmTpqDu9LVyhw/view?usp=sharing)",unsafe_allow_html=True)
             st.write("##")
             st.write(" :office: La Créole Beach Hôtel & Spa - *stagiaire au service informatique*") 
             with st.expander("Activités Réalisées"):
                     st.write(""" -Création d’un site internet avec Wix pour un organisme de formation <br>
-                             -Création de réseaux wi-fi avec <bleu>Unify</bleu> <br>
+                             -Création de réseaux Wi-Fi avec <bleu>Unify</bleu> <br>
                              -Mise en place de <bleu>VLAN avec Unify</bleu> pour accueillir la CONCACAF <br>
-                             -Mise en place d’ordinateurs portables piloté par <bleu>les règles de groupe de l'ative directory (AD)</bleu> <br>
+                             -Mise en place d’ordinateurs portables piloté par <bleu>les règles de groupe de l'active directory (AD)</bleu> <br>
                              -<bleu>Exploitation de base de données avec python</bleu> pour créer une web app avec <bleu>streamlit</bleu> <br>
                              -<bleu>Maintenance d’équipement réseaux.</bleu>
                      """, unsafe_allow_html=True)
-                    st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1da-OtJCv2VQheu1HYb-xmNYWRewJddt3/view?usp=drive_link)",unsafe_allow_html=True)
+                    st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1O1y7fGHOLFB2rYlGoMW6GvZZOCzRz1lk/view?usp=sharing)",unsafe_allow_html=True)
         # -- Dates -- 
         with col6:
             st.write(" :calendar: 9 Décembre 2024 - 17 Janvier 2025")
@@ -258,8 +256,7 @@ if selected =="Veille":
             #--------------------------------
             st.header("Certifications")
             st.write("##")
-            st.write("""Vous trouverez ici les certifications que j'ai <bleu>acquises</bleu>, celles qui sont en <bleu>cours d'ascquisition</bleu>,
-                     ainsi que les certifications que <bleu>j'envisage de réaliser</bleu>.
+            st.write("""Vous trouverez ici les certifications que j'ai <bleu>acquises</bleu>, celles qui sont <bleu>en cours d'acquisition</bleu>, ainsi que celles que <bleu>j'envisage de réaliser</bleu>.
                      
                      """,unsafe_allow_html=True)
             #--------------------------------
@@ -287,32 +284,47 @@ if selected =="Veille":
                                  """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Mars 2023</bleu>",unsafe_allow_html=True)
                         st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
-                        #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1TTuv0BIHPpmm5WIRLABYL6EgMKPE77ve/view?usp=drive_link)",unsafe_allow_html=True)
                     st.write("##")
                     with st.expander("Certification HTML/CSS"):
                         st.write("""Détails de la certification :<br>
-                                    Certification de niveau de langue en anglais, délivrée par le centre de Cambridge. <br>
-                                    L'épreuve se compose d'une épreuve Orale d'interraction en binôme face à un jurry.<br>
-                                    Puis une épreuve écrite de compréhension Orale et Écrite.
+                                    Cette certification couvre les bases du HTML5 pour structurer le contenu (titres, paragraphes, liens, images) et du CSS3 pour la mise en forme et le style visuel.
                                     """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
-                        #st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1QeAbchKwXZJBsgoaqS2Vtol-349hBrL9/view?usp=drive_link)",unsafe_allow_html=True)
+                    st.write("##")
+                    with st.expander("Certification Commuity Management"):
+                        st.write("""Détails de la certification :<br>
+                                    Cette certification présente les bases du métier de Community Manager. <br> Ainsi que les
+                                    étapes d'une campagne éditoriale sur les réseaux sociaux. <br>
+                                    """,unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Juin 2024</bleu>",unsafe_allow_html=True)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1ABJLUlvDyrD8ljfd0d44NUCskE1Xt5Cm/view?usp=drive_link)",unsafe_allow_html=True)
+                    st.write("##")
                 with col11:
                     with st.expander("Pix"):
                         st.write(""" Détails de la certification :<br>
-                                 Cette certification couvre les bases du HTML5 pour structurer le contenu (titres, paragraphes, liens, images) et du CSS3 pour la mise en forme et le style visuel.
+                                 Cette certification permet d'assurer un niveau de compétence numérique. <br>
+                                 Il s'agit d'une certification reconnue par l'état. <br> Réunissant divers domaines de compétences numériques.<br>
                                  """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Février 2025</bleu>",unsafe_allow_html=True)
-                        #st.write("<bleu>Session de renouvellement prévue en 202</bleu>",unsafe_allow_html=True)
-                        #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1QFyzhjGCl64cGOJNI7d471CTLLLFs5L2/view?usp=drive_link)",unsafe_allow_html=True)
                     st.write("##")
                     with st.expander("Certification PHP/MySQL"):
                         st.write("""Détails de la certification :<br>
-                                    Cette certification couvre les bases du langage PHP pour développer des fonctionnalités interactives et utilise MySQL pour gérer les bases de données.
+                                    Cette certification couvre les bases du langage PHP pour développer des fonctionnalités interactives et utilise MySQL pour gérer les bases de données. Permettant de créer des sites internet dynamiques.
+                                    """,unsafe_allow_html=True)
+                        st.write("<bleu>Date d'obtention : Avril 2025</bleu>",unsafe_allow_html=True)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1twwZvzlEPdaSmbO50q7l9K0PrT4p79_y/view?usp=drive_link)",unsafe_allow_html=True)
+                    st.write("##")
+                    with st.expander("Certification Introduction Swift"):
+                        st.write("""Détails de la certification :<br>
+                                    Cette certification est une introduction au monde de la programmation IOS. <br>
+                                    Elle permet de découvrir le langage Swift et de créer des applications IOS. <br> En utilisant Xcode et SwiftUI.
                                     """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
-                        #st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
-                        st.write("##")
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1uzDcfuGqCE1NZ4H8m1cbOTmsR4RIkH1g/view?usp=drive_link)",unsafe_allow_html=True)
+                    st.write("##")
                 with col12:
                     with st.expander("Utilisez ChatGPT pour améliorer votre Productivité"):
                         st.write("""Détails de la certification :<br>
@@ -321,7 +333,7 @@ if selected =="Veille":
                                  Ainsi qu'à améliorer mes compétences en matière de rédaction des prompts pour obtenir des résultats précis.
                                  """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Janvier 2024</bleu>",unsafe_allow_html=True)
-                        #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1xCZRnQVyPKV5mk0rjPBm5WptAgHs9nww/view?usp=drive_link)",unsafe_allow_html=True)
                     st.write("##")
                     with st.expander("Augmentez votre trafic grâce au référencement naturel (SEO)"):
                         st.write("""Détails de la certification :<br>
@@ -329,7 +341,8 @@ if selected =="Veille":
                                  Nous y apprenons aussi à mettre en place une stratégie de référencement pour augmenter le trafic sur un site web (analyse de mots-clés, analyse des balises de la page...).
                                  """,unsafe_allow_html=True)
                         st.write("<bleu>Date d'obtention : Juin 2024</bleu>",unsafe_allow_html=True)
-                        #st.link_button("Voir le certificat", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+                        st.write("[Voir le certificat](https://drive.google.com/file/d/1T2GVqkWVz5-48kbLCAC3sEybLk1pdO_T/view?usp=drive_link)",unsafe_allow_html=True)
+ 
             #--------------------------------
             # -- Certifications En Cours --
             #--------------------------------
@@ -383,6 +396,7 @@ if selected =="Veille":
                     csharp_progress = 75
                     st.progress(csharp_progress)
                     st.write(f"Avancement : {csharp_progress}%")
+            st.write("##")
             #--------------------------------
             # -- Certifications Envisagées --
             #--------------------------------
@@ -395,12 +409,10 @@ if selected =="Veille":
                         st.write(""" J'envisage cette formation par curiosité pour l'exploitation de data avec python.<br>
 
                         """,unsafe_allow_html=True)
-                        #st.write("##")
                 with col2:
                     with st.expander("Sécurisez vos applications web avec l'OWASP"):
                         st.write(""" Cette certifitcaiton couvre les bases de la sécurité des applications web. <br> Elle est donc intéressante pour améliorer la sécurité des applications que je développe.
                         """,unsafe_allow_html=True)
-                        #st.write("##")
                 with col3:
                     with st.expander("C"):
                         st.write(""" Je souhaite m'orienter en licence après mon BTS.<br>
@@ -408,7 +420,7 @@ if selected =="Veille":
                                  Licence.
 
                         """,unsafe_allow_html=True)
-                        #st.write("##")
+            st.write("##")
             #--------------------------------
             # -- Outils Veille Techno --
             #--------------------------------
@@ -468,9 +480,9 @@ if selected =="Projets":
     with col17:
         st.subheader("Price Scope")
         st.write(""" <bleu>Description du projet : </bleu><br>
-                   Price Scope est un comparateur de prix collaboratif. <br>
+                    Price Scope est un comparateur de prix collaboratif. <br>
                     En effet, il se base sur les données saisies par les utilisateurs pour comparer les prix des produits. <br>
-                    Ce projet à pour vocation de permettre aux utilisateurs d'adapter leurs mode de consommation en fonction des prix pratiqués par les différents commerçants.
+                    Ce projet à pour vocation de permettre aux utilisateurs d'adapter leurs mode de consommation en fonction des prix pratiqués par les différents commerces.
                     """,unsafe_allow_html=True)
         st.write("Technologie Utilisée : <bold>Streamlit</bold>", unsafe_allow_html=True)
         st.write("Type de Projet : <bold>Comparateur de Prix</bold>", unsafe_allow_html=True)
@@ -485,7 +497,7 @@ if selected =="Projets":
     with col17:
         st.subheader("Bibliothèque de Jeux")
         st.write(""" <bleu>Description du projet : </bleu><br>
-                   Play Cache est une application codée en Swift pour permettre la gestion de jeux originaux. <br>
+                Play Cache est une application codée en Swift pour permettre la gestion de jeux originaux. <br>
                 J'ai du utiliser des Api en PHP pour communiquer avec la base de données pour permettre les fonctionnalités suivantes :<br>
                 <li>Recherche de jeux</li>
                 <li>Ajout de jeux</li>
@@ -505,8 +517,8 @@ if selected =="Projets":
         st.subheader("Web Scraping")
         st.write(""" <bleu>Description du projet : </bleu><br>
                     J'ai utiliser Python pour réaliser un programme de web scraping. <br> 
-                    L'objectif de ce programme est d'aller sur une section contenant un formulaire de contact, le remplir et le soummettre.<br>
-                    Ce programme existe pour répondre à un besoin d'activation de formulaire. C'est-à-dire que le formulaire de contact nécessite une activation journalière.
+                    L'objectif de ce programme est de maintenir en ligne un site internet. <br>
+                    J'utilise également un script tmux qui permet d'exécuter le programme en tâche de fond. <br>
                     """,unsafe_allow_html=True)
         st.write("Type de Projet : <bold>Projet Automatisation avec Python</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Janvier 2025</bold>",unsafe_allow_html=True)
