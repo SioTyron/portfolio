@@ -114,18 +114,69 @@ with col1:
     #st.write("##")
     st.write("""
          Je m'appelle <name>de CHADIRAC-LARA Tyron</name>, 
-         je suis <bleu>développeur web full stack</bleu> originaire de la <bleu>Guadeloupe :flag-gp:</bleu> et un <bleu>passionné d'informatique</bleu> !""", unsafe_allow_html=True)
+         je suis <bleu>développeur web full stack</bleu> originaire de la <bleu>Guadeloupe</bleu> et un <bleu>passionné d'informatique</bleu> ! Je suis actuellement en deuxième année de BTS SIO option SLAM.""", unsafe_allow_html=True)
     st.write("")
+    # -- Lien Réseaux Sociaux -- 
     # -- Lien Réseaux Sociaux -- 
     col99, col100 = st.columns(2)
     with col99:
-        st.write("[LinkedIn](https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/)",unsafe_allow_html=True)
-        st.write("---")
-        st.link_button("📑 Télécharger mon CV", cv_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+        st.markdown("""
+        <style>
+            .social-badge {
+                display: inline-flex;
+                align-items: center;
+                padding: 0.5rem 1rem;
+                margin: 0.5rem 0;
+                border-radius: 5px;
+                background: #f0f2f6;
+                color: #2d2d2d;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                border: 1px solid #d0d0d0;
+            }
+            .social-badge:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                background: #00b4b4;
+                color: white;
+            }
+            .social-icon {
+                font-size: 1.2rem;
+                margin-right: 0.7rem;
+            }
+        </style>
+        
+        <a href='https://www.linkedin.com/in/tyron-de-chadirac-lara-1551322a3/' class='social-badge' target='_blank'>
+            <span class='social-icon'>👔</span>
+            LinkedIn
+        </a>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        
+        st.markdown(f"""
+        <a href='{cv_url}' class='social-badge' download target='_blank'>
+            <span class='social-icon'>📑</span>
+            Télécharger mon CV
+        </a>
+        """, unsafe_allow_html=True)
+
     with col100:
-        st.write("[GitHub](https://github.com/SioTyron)",unsafe_allow_html=True)
-        st.write("---")
-        st.link_button("↓ Télécharger mon tableau de synthèse", tableau_synthese_url, help=None, type="secondary", icon=None, disabled=False, use_container_width=False)
+        st.markdown(f"""
+        <a href='https://github.com/SioTyron' class='social-badge' target='_blank'>
+            <span class='social-icon'>💻</span>
+            GitHub
+        </a>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        
+        st.markdown(f"""
+        <a href='{tableau_synthese_url}' class='social-badge' download target='_blank'>
+            <span class='social-icon'>📊</span>
+            Tableau de synthèse
+        </a>
+        """, unsafe_allow_html=True)
 
 with col2:
     st_lottie(lottie_dev,width=400, height=300, loop=True, quality='high')
@@ -150,98 +201,375 @@ with st.container():
 if selected == "Accueil":
     with st.container():
         st.write("##")
-        st.title("À propos")
         #--------------------------------
         # -- Section qui suis-je --
         #--------------------------------
-        st.subheader("Qui suis-je ?")
-        st.write(""" Je  suis un jeune <bleu>développeur de 19 ans curieux et ambitieux</bleu>. D'abord intéressé par le développement web, j'ai commencé à me former
-                     sur <bleu>OpenClassrooms dès la 3ème</bleu>. <br>Par la suite, j'ai choisi un cursus qui m'a permis d'approfondir mes connaissances à ce sujet, faisant de moi <bleu>un développeur web full stack.</bleu>
-             """, unsafe_allow_html=True) 
+        st.subheader("À propos de moi")
+
+        with st.container():
+            st.markdown("""
+            <style>
+                .timeline-card {
+                    padding: 1.5rem;
+                    margin: 1rem 0;
+                    background: white;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                }
+                .timeline-card:hover {
+                    transform: translateY(-5px);
+                }
+                .emoji-header {
+                    font-size: 2.5rem;
+                    margin-bottom: 1rem;
+                }
+                .highlight {
+                    color: #00b4b4;
+                    font-weight: 600;
+                }
+            </style>
+            """, unsafe_allow_html=True)
+
+            # Première ligne - Cartes horizontales
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.markdown("""
+                <div class="timeline-card">
+                    <div class="emoji-header">🚀</div>
+                    <h4 style='margin-bottom: 0.5rem;'>Mon Parcours</h4>
+                    <ul style='list-style-type: none; padding-left: 0;'>
+                        <li>▪️ Début en 3ème avec HTML/CSS</li>
+                        <li>▪️ Formation OpenClassrooms</li>
+                        <li>▪️ BTS SIO SLAM</li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+
+            with col2:
+                st.markdown("""
+                <div class="timeline-card">
+                    <div class="emoji-header">💻</div>
+                    <h4 style='margin-bottom: 0.5rem;'>Mon Expertise</h4>
+                    <ul style='list-style-type: none; padding-left: 0;'>
+                        <li>▪️ Development Web Full Stack </li>
+                        <li>▪️ Conception d'applications</li>
+                        <li>▪️ Bases de données SQL</li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+
+            with col3:
+                st.markdown("""
+                <div class="timeline-card">
+                    <div class="emoji-header">🎯</div>
+                    <h4 style='margin-bottom: 0.5rem;'>Ma Vision</h4>
+                    <ul style='list-style-type: none; padding-left: 0;'>
+                        <li>▪️ Transmettre mon savoir</li>
+                        <li>▪️ Automatisation des tâches répétitives</li>
+                        <li>▪️ Apprendre toujours plus</li>
+                    </ul>
+                </div>
+                """, unsafe_allow_html=True)
+
         st.write("##")
         
         # --------------------------------
         # -- Section Formation -- 
         #--------------------------------
-        st.subheader("Formation")
-        st.write("")
-        col3, col4 = st.columns([3, 2])
-        #--------------------------------
-        # -- Nom de l'école --
-        #--------------------------------
-        with col3:
-            st.write(":school: LGT Baimbridge - BTS SIO Option SLAM") 
-            with st.expander("Détails de la formation"):
-                st.write(""" Le BTS SIO (Services Informatiques aux Organisations) est un diplôme de niveau Bac+2 qui forme des techniciens spécialisés dans les services informatiques. Il propose deux options :<br><br>
-                            <bleu>-Option SISR (Solutions d'Infrastructure, Systèmes et Réseaux)</bleu> : Formation axée sur la gestion et la maintenance des réseaux et systèmes informatiques.<br><br>
-                            <bleu>-Option SLAM (Solutions Logicielles et Applications Métiers)</bleu> : Formation centrée sur le développement et la maintenance des applications logicielles.
-                            """,unsafe_allow_html=True)
-        #--------------------------------
-        # -- Dates --
-        #--------------------------------
-        with col4:
-            st.write(" :calendar: 2023 - 2025")
-            st.write("##")
-        
-        #--------------------------------
-        # -- Section Expérience Pro --
-        #--------------------------------
-        st.write("##")
-        st.subheader("Expériences professionnelles")
-        st.write("")
-        col5, col6 = st.columns([3, 2])
-        # -- Intitulé des Postes -- 
-        with col5:
-            st.write(":office: Crédit Agricole Mutuel de Guadeloupe - *stagiaire au service informatique*")
-            with st.expander("Activités Réalisées"):
-                st.write(""" -Création d'une solution <bleu>logicielle sur Excel en VBA</bleu> pour simplifier le travail d'une collègue du service de 
-                             comptabilité. <br>
-                             -Création d'une <bleu>base de données</bleu> et un <bleu>serveur Syslog</bleu> pour récupérer les logs d'un PfSense <br>
-                             -Interface graphique pour interpréter les logs en utilisant le <bleu>framework python : streamlit</bleu><br>
-                             -Informatique de proximité <br>
-                             -Création d'un <bleu>thème enfant sur WordPress</bleu> (avec et sans plugin) 
-                     """,unsafe_allow_html=True)
-                st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1XYu2Uwhie--SL_-qruLNmTpqDu9LVyhw/view?usp=sharing)",unsafe_allow_html=True)
-            st.write("##")
-            st.write(" :office: La Créole Beach Hôtel & Spa - *stagiaire au service informatique*") 
-            with st.expander("Activités Réalisées"):
-                    st.write(""" -Création d’un site internet avec Wix pour un organisme de formation <br>
-                             -Création de réseaux Wi-Fi avec <bleu>Unify</bleu> <br>
-                             -Mise en place de <bleu>VLAN avec Unify</bleu> pour accueillir la CONCACAF <br>
-                             -Mise en place d’ordinateurs portables piloté par <bleu>les règles de groupe de l'active directory (AD)</bleu> <br>
-                             -<bleu>Exploitation de base de données avec python</bleu> pour créer une web app avec <bleu>streamlit</bleu> <br>
-                             -<bleu>Maintenance d’équipement réseaux.</bleu>
-                     """, unsafe_allow_html=True)
-                    st.write("[Consulter l'attestation de stage](https://drive.google.com/file/d/1O1y7fGHOLFB2rYlGoMW6GvZZOCzRz1lk/view?usp=sharing)",unsafe_allow_html=True)
-        # -- Dates -- 
-        with col6:
-            st.write(" :calendar: 9 Décembre 2024 - 17 Janvier 2025")
-            st.write("##") 
-            st.write("##")
-            st.write(" :calendar: 6 Mai 2024 - 14 Juin 2024")
-        
-        st.write("##")
-        st.subheader("Compétences")
+        st.subheader("🎓 Formation")
         with st.container():
-            col7, col8, col9 = st.columns([2,1,2])  
-            with col7:
-                st.write("<competences>Anglais</competences> - ⭐️⭐️⭐️⭐️☆",unsafe_allow_html=True)
-                st.write("---")
+            col1, col2 = st.columns([3, 1])
+            
+            with col1:
+                st.markdown("""
+                <div style='
+                    padding: 1.5rem;
+                    margin: 1rem 0;
+                    background: #f8f9fa;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                    border-left: 4px solid #00b4b4;
+                    min-height: 180px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                '>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🏫</span>
+                            <div>
+                                <h4 style="margin: 0;">BTS SIO Option SLAM</h4>
+                                <p style="margin: 0; color: #6c757d;">LGT Baimbridge</p>
+                            </div>
+                        </div>
+                        <details>
+                            <summary style="cursor: pointer; color: #00b4b4; margin-top: 1rem;">Détails de la formation</summary>
+                            <div style="margin-top: 1rem;">
+                                <p>Le <strong>BTS SIO</strong> (Services Informatiques aux Organisations) propose deux options :</p>
+                                <ul>
+                                    <li><span style="color: #00b4b4;">SISR</span> : Solutions d'Infrastructure, Systèmes et Réseaux</li>
+                                    <li><span style="color: #00b4b4;">SLAM</span> : Solutions Logicielles et Applications Métiers</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col2:
+                st.markdown("""
+                <div style='
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1.5rem;
+                    background: white;
+                    border-radius: 15px;
+                    text-align: center;
+                    min-height: 180px;
+                '>
+                    <div>
+                        <div style="color: #00b4b4; font-weight: 600; font-size: 1.1rem; line-height: 1.4;">
+                            📅 2023 - 2025
+                        </div>
+                        <div style="color: #6c757d; margin-top: 0.5rem;">
+                            En cours
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
 
-                st.write("<competences>HTML/CSS</competences> - ⭐️⭐️⭐️⭐️☆",unsafe_allow_html=True)
-                st.write("---")
+        # Section Expérience Pro
+        st.write("##")
+        st.subheader("💼 Expériences Professionnelles")
 
-                st.write("<competences>C++</competences> - ⭐️⭐️☆☆☆",unsafe_allow_html=True)
-                st.write("---")
-            with col9:
-                st.write("<competences>SQL </competences>- ⭐️⭐️⭐️⭐️☆",unsafe_allow_html=True)
-                st.write("---")
+        # Expérience 1
+        with st.container():
+            col3, col4 = st.columns([3, 1])
+            
+            with col3:
+                st.markdown(f"""
+                <div style='
+                    padding: 1.5rem;
+                    margin: 1rem 0;
+                    background: #f8f9fa;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                    border-left: 4px solid #00b4b4;
+                    min-height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                '>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🏦</span>
+                            <div>
+                                <h4 style="margin: 0;">Crédit Agricole Guadeloupe</h4>
+                                <p style="margin: 0; color: #6c757d;">Stagiaire en informatique</p>
+                            </div>
+                        </div>
+                        <details>
+                            <summary style="cursor: pointer; color: #00b4b4; margin-top: 1rem;">🔍 Voir les réalisations</summary>
+                            <div style="margin-top: 1rem;">
+                                <ul>
+                                    <li>Solution Excel VBA pour la comptabilité</li>
+                                    <li>Base de données et serveur Syslog</li>
+                                    <li>Interface Streamlit d'analyse de logs</li>
+                                    <li>Thème WordPress personnalisé</li>
+                                </ul>
+                                <a href="https://drive.google.com/file/d/1XYu2Uwhie--SL_-qruLNmTpqDu9LVyhw/view" 
+                                style="text-decoration: none; color: #00b4b4; font-size: 0.9rem;">
+                                📎 Attestation de stage
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col4:
+                st.markdown("""
+                <div style='
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1.5rem;
+                    background: white;
+                    border-radius: 15px;
+                    text-align: center;
+                    min-height: 220px;
+                '>
+                    <div>
+                        <div style="color: #00b4b4; font-weight: 600; line-height: 1.4;">
+                            📅 9 Déc 2024<br>au<br>17 Jan 2025
+                        </div>
+                        <div style="color: #6c757d; margin-top: 0.5rem;">
+                            6 semaines
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
 
-                st.write("<competences>PHP </competences>- ⭐️⭐️⭐️☆☆",unsafe_allow_html=True)
-                st.write("---")
+        # Expérience 2
+        with st.container():
+            col5, col6 = st.columns([3, 1])
+            
+            with col5:
+                st.markdown(f"""
+                <div style='
+                    padding: 1.5rem;
+                    margin: 1rem 0;
+                    background: #f8f9fa;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                    border-left: 4px solid #00b4b4;
+                    min-height: 220px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                '>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="font-size: 1.5rem;">🏨</span>
+                            <div>
+                                <h4 style="margin: 0;">Créole Beach Hôtel</h4>
+                                <p style="margin: 0; color: #6c757d;">Stagiaire en informatique</p>
+                            </div>
+                        </div>
+                        <details>
+                            <summary style="cursor: pointer; color: #00b4b4; margin-top: 1rem;">🔍 Voir les réalisations</summary>
+                            <div style="margin-top: 1rem;">
+                                <ul>
+                                    <li>Configuration réseau Unify</li>
+                                    <li>Gestion Active Directory</li>
+                                    <li>Application Streamlit</li>
+                                    <li>Maintenance réseau</li>
+                                </ul>
+                                <a href="https://drive.google.com/file/d/1O1y7fGHOLFB2rYlGoMW6GvZZOCzRz1lk/view" 
+                                style="text-decoration: none; color: #00b4b4; font-size: 0.9rem;">
+                                📎 Attestation de stage
+                                </a>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
+            
+            with col6:
+                st.markdown("""
+                <div style='
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1.5rem;
+                    background: white;
+                    border-radius: 15px;
+                    text-align: center;
+                    min-height: 220px;
+                '>
+                    <div>
+                        <div style="color: #00b4b4; font-weight: 600; line-height: 1.4;">
+                            📅 6 Mai 2024<br>au<br>14 Juin 2024
+                        </div>
+                        <div style="color: #6c757d; margin-top: 0.5rem;">
+                            6 semaines
+                        </div>
+                    </div>
+                </div>
+                """, unsafe_allow_html=True)
 
-                st.write("<competences>Java Script</competences> - ⭐️⭐️☆☆☆",unsafe_allow_html=True)
-                st.write("---")
+        
+        st.write("##")
+        st.write("##")
+    st.subheader("Technologies et Outils")
+    st.markdown("**Liste des technologies et outils que j'utilise dans mes projets**")
+    
+    badges = [
+        # Langages
+        {"name": "Python", "url": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"},
+        {"name": "Java", "url": "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=openjdk&logoColor=white"},
+        {"name": "C%23", "url": "https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white"},
+        {"name": "Swift", "url": "https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white"},
+        
+        # Web
+        {"name": "HTML5", "url": "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"},
+        {"name": "CSS3", "url": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"},
+        {"name": "JavaScript", "url": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"},
+        
+        # Data
+        {"name": "MySQL", "url": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"},
+        {"name": "Pandas", "url": "https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white"},
+        {"name": "Plotly", "url": "https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white"},
+        
+        # Frameworks
+        {"name": "Bootstrap", "url": "https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"},
+        {"name": "React Native", "url": "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"},
+        {"name": "Streamlit", "url": "https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white"},
+        
+        # Design & Outils
+        {"name": "Figma", "url": "https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"},
+        {"name": "Canva", "url": "https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white"},
+        {"name": "Wix", "url": "https://img.shields.io/badge/Wix-0C6EFC?style=for-the-badge&logo=wix&logoColor=white"},
+        {"name": "GitHub", "url": "https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"}
+    ]
+
+    categories = {
+        "Langages": ["Python", "Java", "C%23", "Swift"],
+        "Développement Web": ["HTML5", "CSS3", "Wix", "JavaScript"],
+        "Data & Base de données": ["MySQL", "Pandas", "Plotly"],
+        "Frameworks": ["Bootstrap", "React Native", "Streamlit"],
+        "Design & Outils": ["Figma", "Canva", "GitHub"]
+    }
+
+    # Nouveau style avec catégories
+    st.markdown("""
+    <style>
+    .badges-section {
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 15px;
+        margin: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    .category-title {
+        color: #00b4b4;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .badges-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.2rem;
+        padding: 0.5rem;
+    }
+    .badge-item {
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+    .badge-item:hover {
+        transform: translateY(-3px);
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
+
+    for category, items in categories.items():
+        with st.container():
+            st.markdown(f'<div class="badges-section">'
+                        f'<div class="category-title">{category}</div>'
+                        f'<div class="badges-grid">'
+                        + ''.join([f'<div class="badge-item"><img src="{next(b["url"] for b in badges if b["name"] == item)}" height="60"></div>'
+                                for item in items]) +
+                        '</div></div>', 
+                        unsafe_allow_html=True)
+
+    st.write("---")
 
 
 
@@ -249,182 +577,195 @@ if selected == "Accueil":
 #   Section Veille Technologique 
 #   NavBar == Veille Technologique
 # --------------------------------
-if selected =="Veille":
-    with st.container():
-            #--------------------------------
-            # -- Certifications --
-            #--------------------------------
+if selected == "Veille":
+        with st.container():
+            st.write("##")
             st.header("Certifications")
             st.write("##")
-            st.write("""Vous trouverez ici les certifications que j'ai <bleu>acquises</bleu>, celles qui sont <bleu>en cours d'acquisition</bleu>, ainsi que celles que <bleu>j'envisage de réaliser</bleu>.
-                     
-                     """,unsafe_allow_html=True)
-            #--------------------------------
-            # -- Menu de sélection des catégories de certifications --
-            #--------------------------------
-            certif_select_status = option_menu(
+            st.markdown("""
+            <style>
+                .certif-card {
+                    padding: 1.5rem;
+                    margin: 1rem 0;
+                    background: white;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+                    transition: transform 0.3s ease;
+                    border-left: 4px solid #00b4b4;
+                }
+                .certif-card:hover {
+                    transform: translateY(-3px);
+                }
+                .progress-card {
+                    background: linear-gradient(45deg, #f8f9fa, #ffffff);
+                    padding: 1.5rem;
+                    border-radius: 15px;
+                    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+                }
+            </style>
+            """, unsafe_allow_html=True)
+
+            # Menu de sélection
+            certif_status = option_menu(
                 menu_title=None,
-                options=["Terminées","En Cours", "Envisagées"],
-                icons=["award-fill","award", "calendar4-event"],
+                options=["Terminées", "En Cours", "Envisagées"],
+                icons=["award-fill", "award", "calendar4-event"],
                 orientation="horizontal",
             )
-            #--------------------------------
-            # -- Certifications Terminées --
-            #--------------------------------
-            if certif_select_status == "Terminées":
+
+            # Certifications Terminées
+            if certif_status == "Terminées":
+                cols = st.columns(3)
+                certifications = [
+                    {
+                        "title": "Cambridge English B2",
+                        "icon": "🌐",
+                        "date": "Mars 2023",
+                        "details": "Certification de niveau d'anglais avec épreuves orales et écrites",
+                        "link": "https://drive.google.com/file/d/1TTuv0BIHPpmm5WIRLABYL6EgMKPE77ve/view"
+                    },
+                    {
+                        "title": "Promp Engineering Chat GPT",
+                        "icon": "💬",
+                        "date": "Janvier 2024",
+                        "details": "Introduction au promp engineering et à l'utilisation de Chat GPT pour améliorer ma productivité.",
+                        "link": "https://drive.google.com/file/d/1xCZRnQVyPKV5mk0rjPBm5WptAgHs9nww/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Référencement SEO",
+                        "icon": "📈",
+                        "date": "Juin 2024",
+                        "details": "Maîtrise des fondamentaux du référencement Web et des stratégies d'optimisation.",
+                        "link": "https://drive.google.com/file/d/1T2GVqkWVz5-48kbLCAC3sEybLk1pdO_T/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Community Manager",
+                        "icon": "👥",
+                        "date": "Juin 2024",
+                        "details": "Bases de la gestion de communauté et des réseaux sociaux et des campagnes éditoriales",
+                        "link": "https://drive.google.com/file/d/1ABJLUlvDyrD8ljfd0d44NUCskE1Xt5Cm/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Pix",
+                        "icon": "💻",
+                        "date": "Février 2025",
+                        "details": "Certification de diverses compétences numériques de base.",
+                        "link": "https://drive.google.com/file/d/1QFyzhjGCl64cGOJNI7d471CTLLLFs5L2/view?usp=drive_link"
+                    },
+                    {
+                        "title": "HTML/CSS",
+                        "icon": "🖥️",
+                        "date": "Mars 2025",
+                        "details": "Maîtrise des fondamentaux du développement web front-end",
+                        "link": "https://drive.google.com/file/d/1QeAbchKwXZJBsgoaqS2Vtol-349hBrL9/view"
+                    },
+                    {
+                        "title": "PHP/MySQL",
+                        "icon": "⛁",
+                        "date": "Avril 2025",
+                        "details": "Maîtrise des bases de données et du langage PHP, pour la conception de sites web dynamiques.",
+                        "link": "https://drive.google.com/file/d/1twwZvzlEPdaSmbO50q7l9K0PrT4p79_y/view?usp=drive_link"
+                    },
+                    {
+                        "title": "Swift",
+                        "icon": "< / >",
+                        "date": "Avril 2025",
+                        "details": "Introduction aux bases de la programmation IOS, avec Xcode et SwiftUI.",
+                        "link": "https://drive.google.com/file/d/1uzDcfuGqCE1NZ4H8m1cbOTmsR4RIkH1g/view?usp=drive_link"
+                    },
+                ]
+
+                for idx, certif in enumerate(certifications):
+                    with cols[idx % 3]:
+                        st.markdown(f"""
+                        <div class="certif-card">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <span style="font-size: 1.5rem;">{certif['icon']}</span>
+                                <h4 style="margin: 0;">{certif['title']}</h4>
+                            </div>
+                            <p style="color: #6c757d; margin-bottom: 0.5rem;">{certif['details']}</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="color: #00b4b4; font-size: 0.9rem;">{certif['date']}</span>
+                                <a href="{certif['link']}" target="_blank" style="text-decoration: none; color: #00b4b4;">📎 Voir</a>
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+
+            # Certifications En Cours
+            elif certif_status == "En Cours":
+                progresses = [
+                    {"name": "Swift", "progress": 30, "icon": "📱"},
+                    {"name": "Java", "progress": 55, "icon": "☕"},
+                    {"name": "Python", "progress": 80, "icon": "🐍"},
+                    {"name": "C++", "progress": 75, "icon": "🅲"},
+                    {"name": "TOEIC", "progress": 50, "icon": "🇬🇧"},
+                    {"name": "C#", "progress": 60, "icon": "💻"},
+                    {"name": "UX/UI Desing", "progress": 30, "icon": "💻"},
+                ]
+
+                cols = st.columns(2)
+                for idx, prog in enumerate(progresses):
+                    with cols[idx % 2]:
+                        st.markdown(f"""
+                        <div class="progress-card">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                                    <span style="font-size: 1.2rem;">{prog['icon']}</span>
+                                    <h5 style="margin: 0;">{prog['name']}</h5>
+                                </div>
+                                <span style="color: #00b4b4;">{prog['progress']}%</span>
+                            </div>
+                            <div style="height: 8px; background: #f1f1f1; border-radius: 4px;">
+                                <div style="width: {prog['progress']}%; height: 100%; background: #00b4b4; border-radius: 4px;"></div>
+                            </div>
+                        </div>
+                        """, unsafe_allow_html=True)
+                        st.write("")
+
+            # Section Envisagées
+            elif certif_status == "Envisagées":
                 st.write("##")
-                st.write("""<bold>En cliquant sur le nom d'une certification, un apreçu de celle-ci s'affichera.</bold>""",unsafe_allow_html=True)
-                col10, col11, col12 = st.columns(3)
-                with col10: 
-                    with st.expander("Cambridge"):
-                        st.write("""Détails de la certification :<br>
-                                 Certification de niveau de langue en anglais, délivrée par le centre de Cambridge. <br>
-                                 L'épreuve se compose d'une épreuve Orale d'interraction en binôme face à un jurry.<br>
-                                 Puis une épreuve écrite de compréhension Orale et Écrite.
-                                 """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Mars 2023</bleu>",unsafe_allow_html=True)
-                        st.write("<belu>Niveau B2</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1TTuv0BIHPpmm5WIRLABYL6EgMKPE77ve/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                    with st.expander("Certification HTML/CSS"):
-                        st.write("""Détails de la certification :<br>
-                                    Cette certification couvre les bases du HTML5 pour structurer le contenu (titres, paragraphes, liens, images) et du CSS3 pour la mise en forme et le style visuel.
-                                    """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1QeAbchKwXZJBsgoaqS2Vtol-349hBrL9/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                    with st.expander("Certification Commuity Management"):
-                        st.write("""Détails de la certification :<br>
-                                    Cette certification présente les bases du métier de Community Manager. <br> Ainsi que les
-                                    étapes d'une campagne éditoriale sur les réseaux sociaux. <br>
-                                    """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Juin 2024</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1ABJLUlvDyrD8ljfd0d44NUCskE1Xt5Cm/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                with col11:
-                    with st.expander("Pix"):
-                        st.write(""" Détails de la certification :<br>
-                                 Cette certification permet d'assurer un niveau de compétence numérique. <br>
-                                 Il s'agit d'une certification reconnue par l'état. <br> Réunissant divers domaines de compétences numériques.<br>
-                                 """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Février 2025</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1QFyzhjGCl64cGOJNI7d471CTLLLFs5L2/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                    with st.expander("Certification PHP/MySQL"):
-                        st.write("""Détails de la certification :<br>
-                                    Cette certification couvre les bases du langage PHP pour développer des fonctionnalités interactives et utilise MySQL pour gérer les bases de données. Permettant de créer des sites internet dynamiques.
-                                    """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Avril 2025</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1twwZvzlEPdaSmbO50q7l9K0PrT4p79_y/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                    with st.expander("Certification Introduction Swift"):
-                        st.write("""Détails de la certification :<br>
-                                    Cette certification est une introduction au monde de la programmation IOS. <br>
-                                    Elle permet de découvrir le langage Swift et de créer des applications IOS. <br> En utilisant Xcode et SwiftUI.
-                                    """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Mars 2025</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1uzDcfuGqCE1NZ4H8m1cbOTmsR4RIkH1g/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                with col12:
-                    with st.expander("Utilisez ChatGPT pour améliorer votre Productivité"):
-                        st.write("""Détails de la certification :<br>
-                                 Certification d'introduction au "prompt engineering". <br>
-                                 Au cours de ce parcours, j'ai pu apprendre à utiliser ChatGPT pour améliorer ma productivité au quotidien. <br>
-                                 Ainsi qu'à améliorer mes compétences en matière de rédaction des prompts pour obtenir des résultats précis.
-                                 """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Janvier 2024</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1xCZRnQVyPKV5mk0rjPBm5WptAgHs9nww/view?usp=drive_link)",unsafe_allow_html=True)
-                    st.write("##")
-                    with st.expander("Augmentez votre trafic grâce au référencement naturel (SEO)"):
-                        st.write("""Détails de la certification :<br>
-                                 Cette certification couvre les bases du SEO, les bonnes pratiques pour optimiser le référencement naturel de son site web. Ainsi que les mauvaises pratiques qui peuvent pénaliser un site internet dans les classements.
-                                 Nous y apprenons aussi à mettre en place une stratégie de référencement pour augmenter le trafic sur un site web (analyse de mots-clés, analyse des balises de la page...).
-                                 """,unsafe_allow_html=True)
-                        st.write("<bleu>Date d'obtention : Juin 2024</bleu>",unsafe_allow_html=True)
-                        st.write("[Voir le certificat](https://drive.google.com/file/d/1T2GVqkWVz5-48kbLCAC3sEybLk1pdO_T/view?usp=drive_link)",unsafe_allow_html=True)
- 
-            #--------------------------------
-            # -- Certifications En Cours --
-            #--------------------------------
-            if certif_select_status == "En Cours":
+                certifications = [
+                    {
+                        "title": "Big Data",
+                        "icon": "📊",
+                        "details": "Exploitation de données avec Python"
+                    },
+                    {
+                        "title": "Sécurité OWASP",
+                        "icon": "🔒", 
+                        "details": "Bonnes pratiques de sécurité web"
+                    },
+                    {
+                        "title": "Langage C",
+                        "icon": "🅒",
+                        "details": "Pour ma poursuite d'études"
+                    },
+                    {
+                        "title": "Gestion de Projet",
+                        "icon": "📈",
+                        "details": "Compétence clé pour la gestion de projets"
+                    },
+                ]
+
+                cols = st.columns(3)
+                for i, cert in enumerate(certifications):
+                    with cols[i % 3]:
+                        st.markdown(f"""
+                        <div class="certif-card">
+                            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                <span style="font-size: 1.5rem;">{cert['icon']}</span>
+                                <h4 style="margin: 0;">{cert['title']}</h4>
+                            </div>
+                            <p style="color: #6c757d; margin-bottom: 0.5rem;">{cert['details']}</p>
+                        </div>
+                        """, unsafe_allow_html=True)
                 st.write("##")
-                st.header("Certifications")
-                col13, col14, col15 = st.columns([2,1,2])  
-                with col13:
-                    st.write("Swift")
-                    html_progress = 30
-                    st.progress(html_progress)
-                    st.write(f"Avancement : {html_progress}%")
-                        
-                    st.write("---")
-
-                    st.write("Java")
-                    java_progress = 55
-                    st.progress(java_progress)
-                    st.write(f"Avancement : {java_progress}%")
-
-                    st.write("---")
-
-                    st.write("C++")
-                    php_sql_progress = 75
-                    st.progress(php_sql_progress)
-                    st.write(f"Avancement : {php_sql_progress}%")
-
-                    st.write("---")
-
-                    st.write("TOEIC")
-                    csharp_progress = 50
-                    st.progress(csharp_progress)
-                    st.write(f"Avancement : {csharp_progress}%")
-
-                with col15:
-                    st.write("Python")
-                    python_progress = 80
-                    st.progress(python_progress)
-                    st.write(f"Avancement : {python_progress}%")
-
-                    st.write("---")
-
-                    st.write("C#")
-                    csharp_progress = 75
-                    st.progress(csharp_progress)
-                    st.write(f"Avancement : {csharp_progress}%")
-
-                    st.write("---")
-
-                    st.write("UI/UX Design")
-                    csharp_progress = 75
-                    st.progress(csharp_progress)
-                    st.write(f"Avancement : {csharp_progress}%")
-            st.write("##")
-            #--------------------------------
-            # -- Certifications Envisagées --
-            #--------------------------------
-            if certif_select_status == "Envisagées":
-                st.write("Cette section regroupe les certifications que j'envisage de réaliser, ainsi que leur rapport avec mon projet professionnel.")
-                st.write("")
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    with st.expander("Big Data"):
-                        st.write(""" J'envisage cette formation par curiosité pour l'exploitation de data avec python.<br>
-
-                        """,unsafe_allow_html=True)
-                with col2:
-                    with st.expander("Sécurisez vos applications web avec l'OWASP"):
-                        st.write(""" Cette certifitcaiton couvre les bases de la sécurité des applications web. <br> Elle est donc intéressante pour améliorer la sécurité des applications que je développe.
-                        """,unsafe_allow_html=True)
-                with col3:
-                    with st.expander("C"):
-                        st.write(""" Je souhaite m'orienter en licence après mon BTS.<br>
-                                 Ainsi, j'aurais besoin de connaître les bases du language C pour suivre le programme de<br>
-                                 Licence.
-
-                        """,unsafe_allow_html=True)
-            st.write("##")
             #--------------------------------
             # -- Outils Veille Techno --
             #--------------------------------
-
+            st.write("##")
+            st.write("##")
             st.header("Mes sources de Veille Technologique")
             st.write("##")
             col1, col2 = st.columns([1,2])
@@ -523,7 +864,6 @@ if selected =="Projets":
         st.write("Type de Projet : <bold>Projet Automatisation avec Python</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Janvier 2025</bold>",unsafe_allow_html=True)
         st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/TBot/tree/main)")
-        #st.write(":camera: [Voir une démonstration]()")
     st.write("---")
     #-------------------------------------------------------
     col16,col17 = st.columns([1,2])
@@ -606,7 +946,6 @@ if selected =="Projets":
                     """,unsafe_allow_html=True)
         st.write("Type de Projet : <bold>Projet Site Web Dynamique MVC</bold>", unsafe_allow_html=True)
         st.write("Date de réalisation : <bold>Mai 2024</bold>",unsafe_allow_html=True)
-        #st.write(":computer: [Voir le code du projet](https://github.com/SioTyron/Aichi_Box)")
         st.write(":camera: [Voir le projet en image](https://drive.google.com/drive/folders/1W5ze1GB7Oadeq6xDvYr9xApr86kKV4R6?usp=drive_link)")
     st.write("---")
     col18, col19 = st.columns([1,2])
