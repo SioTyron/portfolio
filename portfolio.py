@@ -267,8 +267,8 @@ if selected == "Accueil":
                     <h4 style='margin-bottom: 0.5rem;'>Ma Vision</h4>
                     <ul style='list-style-type: none; padding-left: 0;'>
                         <li>▪️ Transmettre mon savoir</li>
-                        <li>▪️ Automatisation des tâches répétitives</li>
-                        <li>▪️ Apprendre toujours plus</li>
+                        <li>▪️ Automatiser pour gagner en efficacité</li>
+                        <li>▪️ Développer de nouvelles compétences</li>
                     </ul>
                 </div>
                 """, unsafe_allow_html=True)
@@ -501,6 +501,7 @@ if selected == "Accueil":
         {"name": "HTML5", "url": "https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"},
         {"name": "CSS3", "url": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"},
         {"name": "JavaScript", "url": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"},
+        {"name": "PHP", "url": "https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"},
         
         # Data
         {"name": "MySQL", "url": "https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white"},
@@ -521,7 +522,7 @@ if selected == "Accueil":
 
     categories = {
         "Langages": ["Python", "Java", "C%23", "Swift"],
-        "Développement Web": ["HTML5", "CSS3", "Wix", "JavaScript"],
+        "Développement Web": ["HTML5", "CSS3", "PHP", "Wix", "JavaScript"],
         "Data & Base de données": ["MySQL", "Pandas", "Plotly"],
         "Frameworks": ["Bootstrap", "React Native", "Streamlit"],
         "Design & Outils": ["Figma", "Canva", "GitHub"]
